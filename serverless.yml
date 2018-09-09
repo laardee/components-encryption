@@ -1,0 +1,15 @@
+type: components-encryption
+
+components:
+  functionEcho:
+    type: aws-lambda
+    inputs:
+      name: components-echo
+      handler: index.handler
+      root: ${self.path}/code/echo
+      memory: 512
+      timeout: 15
+      runtime: nodejs8.10
+      environment:
+        someValue: some-value
+
